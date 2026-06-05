@@ -111,7 +111,7 @@ export default function About() {
               {/* Main image frame */}
               <div className="w-full h-full rounded-3xl overflow-hidden border border-white/8 shadow-2xl shadow-accent/10">
 
-                  <img src="/profile_pic.avif" alt="V. Prasath" className="w-full h-full object-cover" />
+                  <img src="/profile_pic.jpg" alt="V. Prasath" className="w-full h-full object-cover" />
                 
                 <div className="w-full h-full bg-gradient-to-br from-ink-700 via-ink-800 to-ink-900 flex flex-col items-center justify-center gap-4">
                   <div className="font-display text-7xl font-bold gradient-gold clip-text">VP</div>
