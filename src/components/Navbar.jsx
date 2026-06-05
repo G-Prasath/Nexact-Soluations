@@ -120,7 +120,7 @@ export default function Navbar({ isDark, onToggle }) {
           ))}
           <li>
             <button onClick={() => scrollTo('contact')} className="btn-primary text-xs px-4 py-2 mt-2">
-              Hire Me
+              Get in Touch
             </button>
           </li>
         </ul>

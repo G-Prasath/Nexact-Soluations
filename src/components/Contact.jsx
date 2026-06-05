@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, Github, Linkedin, MessageCircle  } from 'lucide-react'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -70,7 +70,8 @@ export default function Contact() {
             <div className="card p-7 space-y-5">
               <h3 className="font-display text-xl font-bold">Get in Touch</h3>
               {[
-                { icon: Mail,   label: 'Email',    value: 'guruprasathmsc@gmail.com', href: 'mailto:guruprasathmsc@gmail.com' },
+                { icon: Mail,   label: 'Email',    value: 'nexactsolution@gmail.com', href: 'mailto:nexactsolution@gmail.com' },
+                { icon: MessageCircle,  label: 'WhatsApp',    value: '+91 6369260614',           href: 'https://wa.me/+916369260614' },
                 { icon: Phone,  label: 'Phone',    value: '+91 80155 44372',           href: 'tel:+918015544372' },
                 { icon: MapPin, label: 'Location', value: 'Tamil Nadu, India',         href: null },
               ].map(({ icon: Icon, label, value, href }) => (
