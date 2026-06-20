@@ -7,7 +7,7 @@ import { resolve } from 'path'
 const robotsPlugin = () => ({
   name: 'generate-robots',
   closeBundle() {
-    const robots = `User-agent: *\nAllow: /\nSitemap: https://vprasath.dev/sitemap.xml\n`
+    const robots = `User-agent: *\nAllow: /\nSitemap: https://www.nexactsolutions.in/sitemap.xml\n`
     writeFileSync(resolve(__dirname, 'dist/robots.txt'), robots)
   }
 })
@@ -16,7 +16,7 @@ export default defineConfig({
   plugins: [
     react(),
     sitemap({
-      hostname: 'https://vprasath.dev',
+      hostname: 'https://www.nexactsolutions.in',
       routes: ['/'],
       changefreq: 'monthly',
       priority: 1.0,
