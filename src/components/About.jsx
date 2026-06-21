@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger)
 const TRAITS = [
   {
     icon: '⚡',
-    title: 'Performance-Driven',
+    title: 'Performance-Drivens',
     text: 'I optimise every layer — from component renders to database queries — ensuring fast, smooth experiences that users notice.',
   },
   {
