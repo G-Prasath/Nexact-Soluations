@@ -24,15 +24,21 @@ export default defineConfig({
     }),
     robotsPlugin(),
   ],
+
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          gsap: ['gsap'],
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('gsap')) {
+              return 'gsap'
+            }
+            return 'vendor'
+          }
         }
       }
     },
+
     minify: 'terser',
     cssCodeSplit: true,
   },
