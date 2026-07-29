@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { Mail, Phone, MapPin, Send, Github, Linkedin, MessageCircle  } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, Github, Linkedin, MessageCircle, Instagram, Facebook  } from 'lucide-react'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -91,12 +91,12 @@ export default function Contact() {
             </div>
 
             {/* Social */}
-            {/* <div className="card p-6">
+            <div className="card p-6">
               <h3 className="font-display font-semibold mb-4">Follow My Work</h3>
               <div className="grid grid-cols-2 gap-3">
                 {[
-                  { icon: Github,   label: 'GitHub',   href: 'https://github.com/G-Prasath',  sub: 'G-Prasath' },
-                  { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/prasath264',   sub: 'V. Prasath' },
+                  { icon: Instagram,   label: 'Instagram',   href: 'https://www.instagram.com/nexact_solutions?igsh=MXdmZ3YyeWRnZzR3Zw==',  sub: '' },
+                  { icon: Facebook, label: 'Facebook', href: 'https://www.facebook.com/nexactsolution',   sub: '' },
                 ].map(({ icon: Icon, label, href, sub }) => (
                   <a key={label} href={href} target="_blank" rel="noopener noreferrer"
                     className="flex flex-col items-center gap-2 p-4 rounded-xl bg-white/3 hover:bg-accent/10 hover:text-accent border border-transparent hover:border-accent/20 transition-all text-center group">
@@ -106,7 +106,7 @@ export default function Contact() {
                   </a>
                 ))}
               </div>
-            </div> */}
+            </div>
 
             {/* Availability */}
             <div className="card p-5 border-accent/20 bg-accent/5">
@@ -114,7 +114,7 @@ export default function Contact() {
                 <span className="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse flex-shrink-0" />
                 <div>
                   <div className="font-sans text-sm font-semibold">Currently Available</div>
-                  <div className="font-sans text-xs opacity-55 mt-0.5">Open for full-time & freelance opportunities</div>
+                  {/* <div className="font-sans text-xs opacity-55 mt-0.5">Open for full-time & freelance opportunities</div> */}
                 </div>
               </div>
             </div>
