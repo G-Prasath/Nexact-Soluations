@@ -1,4 +1,6 @@
 import { useEffect, useRef } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -14,16 +16,21 @@ import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
+import PrivacyPolicy from "./PrivacyPolicy";
+
 gsap.registerPlugin(ScrollTrigger);
 
-export default function App() {
+// Your existing portfolio page
+function Portfolio() {
   const { isDark, toggle } = useTheme();
   const pageRef = useRef(null);
 
   useEffect(() => {
-    // Page-level smooth scroll setup for GSAP ScrollTrigger
     ScrollTrigger.refresh();
-    return () => ScrollTrigger.getAll().forEach((t) => t.kill());
+
+    return () => {
+      ScrollTrigger.getAll().forEach((t) => t.kill());
+    };
   }, []);
 
   return (
@@ -31,7 +38,7 @@ export default function App() {
       {/* Grain texture overlay */}
       <div className="grain-overlay" aria-hidden="true" />
 
-      {/* Custom cursor (desktop only) */}
+      {/* Custom cursor */}
       <Cursor />
 
       {/* Navigation */}
@@ -41,7 +48,9 @@ export default function App() {
       <main>
         <Hero isDark={isDark} />
         <About />
+
         {/* <Projects /> */}
+
         <Experience />
         <Skills />
         <Testimonials />
@@ -50,5 +59,21 @@ export default function App() {
 
       <Footer />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+
+        {/* Home / Portfolio */}
+        <Route path="/" element={<Portfolio />} />
+
+        {/* Privacy Policy */}
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+
+      </Routes>
+    </BrowserRouter>
   );
 }
