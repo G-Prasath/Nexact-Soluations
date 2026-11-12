@@ -12,6 +12,7 @@ const robotsPlugin = () => ({
   }
 })
 
+
 export default defineConfig({
   plugins: [
     react(),
